@@ -7,12 +7,16 @@
 		<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 		<meta name="generator" content="Jekyll v4.1.1">
 		<title>
-			{% block title %}Udemy_2_
+			{% block title %}Accueil - La Boutique à Rémi
 			{% endblock %}
 		</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
 
 		<!-- Bootstrap core CSS -->
-		<link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+		<link href="{{ asset('assets/css/bootstrap_2_.min.css') }}" rel="stylesheet">
 
 		<style>
 			.bd-placeholder-img {
@@ -36,19 +40,33 @@
 
 	</head>
 	<body>
-		<header>
+		<header id="haut">
 			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-				<a class="navbar-brand" href="#">La boutique à Rémi</a>
+				<a class="navbar-brand" href="{{ path('home') }}">La boutique à Rémi</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item active">
-							<a class="nav-link" href="/">Accueil
+							<a class="nav-link" href="#">Nos Produits
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
+
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Qui sommes-nous ?
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Contact
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+
+
 						{# <li class="nav-item">
 						                    <a class="nav-link" href="#">Link</a>
 						                </li>
@@ -59,14 +77,14 @@
 
 						{%if app.user%}
 							<div>
-								<a class="btn btn-outline-success my-2 my-sm-0 " href="{{path('account')}}">Mon Compte</a>
+								<a class="btn btn-outline-success my-2 my-sm-0 " href="{{path('account')}}">Mon Compte <small>({{app.user.Prenom}})</small></a>
 							</div>
 							<div>
 								<a class="btn btn-outline-success my-2 my-sm-0" href="{{path('app_logout')}}">Déconnexion</a>
 							</div>
 						{% else %}
 							<div>
-								<a class="btn btn-outline-success my-2 my-sm-0" href="{{path('app_login')}}">Connexion</a>
+								<a class="button1 btn btn-outline-success_perso_ my-2 my-sm-0" href="{{path('app_login')}}">Connexion</a>
 							</div>
 							<div>
 								<a class="btn btn-outline-success my-2 my-sm-0" href="{{path('register')}}">Inscription</a>
@@ -160,11 +178,13 @@
 			<!-- /.container -->
 
 			<!-- FOOTER -->
-			<footer class="container">
+            {# <footer class="container"> #}
+	        <footer class="footer_perso">
+
 				<p class="float-right">
-					<a href="#">Retour en haut de page</a>
+					<a href="#haut">Retour en haut de page</a>
 				</p>
-				<p>&copy; 2017-2020 Company, Inc. &middot;
+				<p>&copy; 2017-2021 La Boutique à Rémi &middot;
 					<a href="#">Privacy</a>
 					&middot;
 					<a href="#">Terms</a>
