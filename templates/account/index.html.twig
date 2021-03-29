@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Votre compte sur La boutique à Rémi{% endblock %}
+
+{% block content %}
+<h1>Mon compte</h1>
+
+Bienvenue{{app.user.Prenom}}dans votre compte<br>
+
+
+<a href="{{ path('account_password') }}">Modifier votre mot de passe</a><br>
+
+
+- modifier adresses<br>
+- modifier panier<br>
+
+{% endblock %}
