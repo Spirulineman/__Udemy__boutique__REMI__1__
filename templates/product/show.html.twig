@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{product.name}} - La boutique à Rémi{% endblock %}
+
+{% block content %}
+
+
+<div class="row">
+
+    <div class="col-md-4">
+        <img src="/uploads/files/{{product.Illustration}}" alt=" {{product.name}}" class="img-fluid">
+    </div>
+
+    <div class="col-md-8">
+        <h3>{{product.name}}</h3>
+        <p>{{product.subtitle}}</p>
+        <p>{{product.description}}</p>
+        <p class="product-price_2_ ">{{( product.prix /100) |number_format(2, ',','.') }} €</p>
+    </div>
+
+    <div>
+        
+    </div>
+</div>
+
+
+{# <pre>
+    {{ dump(product) }}
+</pre> #}
+
+{% endblock %}

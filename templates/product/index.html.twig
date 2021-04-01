@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos produits - La boutique à Rémi{% endblock %}
+
+{% block content %}
+<h1>Nos produits</h1>
+<div class="row product-container">
+{% for product in products %}
+    <div class="col-md-4">
+        <div class="product-item text-center">
+        <a href="{{ path('product', {'slug' : product.slug}) }}"><img src="/uploads/files/{{product.illustration}}" alt="{{product.name}}" class="img-fluid"></a>
+        <a href="{{ path('product', {'slug' : product.slug}) }}"><h5>{{product.Name}}</h5></a>
+            <span class="product-sub">{{product.subtitle}}</span>
+            <a href="{{ path('product', {'slug' : product.slug}) }}"><span class="product-price">{{( product.prix /100) |number_format(2, ',','.') }} €</span></a>
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+
+{% endblock %}
