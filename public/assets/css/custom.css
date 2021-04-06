@@ -1,12 +1,15 @@
-
+.body {
+  position: absolute;
+}
 
 .footer_perso {
   text-align: center;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   background-color: #dfeaff;
   padding-top: 25px;
+  padding-bottom: 30px;
 }
 
 .button1 {
@@ -54,7 +57,7 @@
 
 .product-container {
 
-  margin-bottom: 220px;
+  margin-bottom: 100px;
   
 }
 
@@ -66,12 +69,14 @@
 
 .product-price_2_ {
 
-  font-size: 15px;
+  font-size: 25px;
   font-weight: bold;
   background-color: rgba(233, 230, 230, 0.2);
   text-shadow: rgb(235, 55, 55);
   box-shadow: black;
   margin-right: 10px;
   color: coral;
-  text-align: center;
+  text-align: left;
+  padding-left: 20px;
+
 }

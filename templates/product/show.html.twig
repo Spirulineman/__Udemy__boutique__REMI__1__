@@ -7,15 +7,19 @@
 
 <div class="row">
 
-    <div class="col-md-4">
+    <div class="col-md-5">
         <img src="/uploads/files/{{product.Illustration}}" alt=" {{product.name}}" class="img-fluid">
     </div>
 
-    <div class="col-md-8">
+    <div class="col-md-7 my-auto">
         <h3>{{product.name}}</h3>
         <p>{{product.subtitle}}</p>
+        <p class="product-price_2_ ">{{( product.prix /100) |number_format(2, ',','.') }} €</h4></p>
+        <hr>
         <p>{{product.description}}</p>
-        <p class="product-price_2_ ">{{( product.prix /100) |number_format(2, ',','.') }} €</p>
+        <hr>
+        <a href="" class="btn btn-primary">Ajouter au panier</a>
+        
     </div>
 
     <div>
